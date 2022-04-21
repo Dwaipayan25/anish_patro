@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monday Morning - NIT Rourkela Student Media Body</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Year', 'Today', 'Yesterday'],
+                ['0', 12, 33],
+                ['1', 22, 34],
+                ['2', 27, 31],
+                ['3', 29.5, 27],
+                ['4', 29, 23],
+                ['5', 28.7, 24],
+                ['6', 32, 28],
+                ['7', 43, 32],
+                ['8', 50.5, 33],
+                ['9', 43, 34],
+                ['10', 28, 31],
+                ['11', 19, 26],
+                ['12', 18, 18],
+                ['13', 24, 17],
+                ['14', 36, 22],
+                ['15', 43, 37],
+                ['16', 48, 38],
+                ['17', 46, 30],
+                ['18', 42, 31],
+                ['19', 38, 36],
+                ['20', 37, 35]
+
+            ]);
+
+            var options = {
+                title: "Today's Trends",
+                curveType: 'function',
+                legend: { position: 'bottom' }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="coantainer">
+        <div class="left">
+            <div class="logo">
+                <img src="logo.png" alt="Monday Morning">
+                <p>Monday Morning</p>
+            </div>
+            <div class="rama">
+                <img src="profile.png" alt="">
+                <p id="ram">Rama Krushna</p>
+                <p id="desi">Design Coordiantor</p>
+            </div>
+            <div class="down">
+                <div class="people">
+                    <img src="People Online.png" alt="">
+                    <p id="people1">People Online</p>
+                </div>
+                <div class="dash">
+                    <img src="Dashboard.png" alt="">
+                    <p>Dashboard</p>
+                </div>
+                <div class="all">
+                    <img src="All Posts.png" alt="">
+                    <p id="all1">All Posts</p>
+                </div>
+                <div class="calender">
+                    <img src="Calender.png" alt="">
+                    <p id="calender1">Calender</p>
+                </div>
+                <div class="new">
+                    <img src="New Post.png" alt="">
+                    <p id="new1">New Post</p>
+                </div>
+                <div class="comment">
+                    <img src="Comments.png" alt="">
+                    <p id="comment1">Comments</p>
+                </div>
+                <div class="squ">
+                    <img src="Squiggkes.png" alt="">
+                    <p id="squ1">Squiggles</p>
+                </div>
+                <div class="questions">
+                    <img src="Questions.png" alt="">
+                    <p id="questions1">Questions</p>
+                </div>
+                <div class="forum">
+                    <img src="Forum.png" alt="">
+                    <p id="forum1">Forum</p>
+                </div>
+                <div class="editor">
+                    <img src="Editor's pick.png" alt="">
+                    <p id="editor1">Editor's pick</p>
+                </div>
+                <div class="cache">
+                    <img src="Cache.png" alt="">
+                    <p id="cache1">Cache</p>
+                </div>
+                <div class="career">
+                    <img src="Rest.png" alt="">
+                    <p id="career1">Career</p>
+                </div>
+                <div class="multi">
+                    <img src="Rest.png" alt="">
+                    <p id="multi1">Multimedia</p>
+                </div>
+                <div class="live">
+                    <img src="Rest.png" alt="">
+                    <p id="live1">Live</p>
+                </div>
+                <div class="issue">
+                    <img src="Rest.png" alt="">
+                    <p id="issue1">Issue</p>
+                </div>
+                <div class="acad">
+                    <img src="Rest.png" alt="">
+                    <p id="acad1">Academic Sessions</p>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="overview">
+                <div class="topline">
+                    <p id="overview1">Overview</p>
+                    <div class="profileside">
+                        <img src="search.png" alt="" id="search">
+                        <img src="notification.png" alt="" id="notification">
+                        <div class="profile">
+                            <p id="jones">Jones Ferdinand</p>
+                            <img src="profile.png" alt="" id="profile1">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid">
+                    <div class="unresolved">
+                        <p id="unre1">Unresolved</p>
+                        <p id="unre">60</p>
+                    </div>
+                    <div class="overdue">
+                        <p id="over1">Overdue</p>
+                        <p id="over">16</p>
+                    </div>
+                    <div class="open">
+                        <p id="op1">Open</p>
+                        <p id="op">43</p>
+                    </div>
+                    <div class="onhold">
+                        <p id="hold1">On Hold</p>
+                        <p id="hold">64</p>
+                    </div>
+                </div>
+            </div>
+            <div class="graph">
+                <div id="curve_chart" class="graph1"></div>
+                <div class="graph2">
+                    <div class="resolved">
+                        <p id="reso">Resolved</p>
+                        <p id="reson">449</p>
+                    </div>
+                    <div class="received">
+                        <p id="rec">Received</p>
+                        <p id="rec1">426</p>
+                    </div>
+                    <div class="avgfir">
+                        <p id="avgfi">Average first response time</p>
+                        <p id="avgfi1">33m</p>
+                    </div>
+                    <div class="avgres">
+                        <p id="avgre">Average response time</p>
+                        <p id="avgre1">3h 8m</p>
+                    </div>
+                    <div class="res">
+                        <p id="res">Resolution with SLA</p>
+                        <p id="res1">94%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mainbottom">
+                <div class="bottomleft">
+                    <div class="top">
+                        <p id="tkt">Unresolved Tickets</p>
+                        <p id="tkt1">View Details</p>
+                    </div>
+                    <div class="first">
+                        <p id="req">Waiting on Feature Request</p>
+                        <p id="req1">4238</p>
+                    </div>
+                    <div class="second">
+                        <p id="awa">Awaiting Customer Response</p>
+                        <p id="awa1">1005</p>
+                    </div>
+                    <div class="third">
+                        <p id="dev">Awaiting Developer Fix</p>
+                        <p id="dev1">914</p>
+                    </div>
+                    <div class="four">
+                        <p id="pend">Pending</p>
+                        <p id="pend1">281</p>
+                    </div>
+                </div>
+                <div class="bottomright">
+                    <div class="task">
+                        <p class="task1">Tasks</p>
+                        <p class="task2">View all</p>
+                    </div>
+                    <div class="create">
+                        <p class="create1">Create New Task</p>
+                        <p class="create2">+</p>
+                    </div>
+                    <div class="fin">
+                        <p class="fin1">Finish Ticket Update</p>
+                        <p class="fin2">URGENT</p>
+                    </div>
+                    <div class="cre">
+                        <p class="cre1">Create new ticket example</p>
+                        <p class="cre2">NEW</p>
+                    </div>
+                    <div class="upd">
+                        <p class="upd1">Update ticket report</p>
+                        <p class="upd2">DEFAULT</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
